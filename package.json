@@ -1,0 +1,19 @@
+{
+  "name": "easy-discord.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PY44N/easy-discord.js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PY44N/easy-discord.js/issues"
+  },
+  "homepage": "https://github.com/PY44N/easy-discord.js#readme"
+}
