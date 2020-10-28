@@ -1,6 +1,6 @@
 {
   "name": "@py4n/easy-discord.js",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A framework for making discord bot development easier",
   "main": "./src/",
   "scripts": {

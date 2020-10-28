@@ -2,9 +2,9 @@ const Discord = require('discord.js')
 const client = new Discord.Client()
 
 class BotClass {
-    constructor(token, prefix) {
-        this.prefix = prefix
-        this.token = token
+    constructor(options) {
+        this.prefix = options.prefix
+        this.token = options.token
         this.cmds = []
         client.on('ready', () => {
             console.log("Connected as " + client.user.tag)
@@ -20,6 +20,20 @@ class BotClass {
                     let args = splitCommand.splice(1)
                     if (this.cmds[primaryCommand]) {
                         this.cmds[primaryCommand].cmd(msg, args)
+                    }
+                    if (primaryCommand == "help") {
+                        const HelpEmbed = new Discord.MessageEmbed()
+                            .setColor(options.embed_settings.color)
+                            .setTitle("Help")
+                            .setDescription("Prefix = " + this.prefix)
+                            .setAuthor(options.embed_settings.name)
+                            .setFooter(options.embed_settings.footer);
+                            HelpEmbed.addField("`help`", 'Shows You All The Commmands You Can Use')
+                            for (const cmd of this.cmds) {
+                                HelpEmbed.addField('`' + cmd + '`', cmd.desc)
+                        }
+
+                        msg.channel.send(HelpEmbed)
                     }
                 }
             }
