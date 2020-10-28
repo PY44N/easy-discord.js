@@ -1,7 +1,7 @@
 {
-  "name": "easy-discord.js",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@py4n/easy-discord.js",
+  "version": "1.0.2",
+  "description": "A framework for making discord bot development easier",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,10 +10,23 @@
     "type": "git",
     "url": "git+https://github.com/PY44N/easy-discord.js.git"
   },
-  "author": "",
+  "author": "Pyan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/PY44N/easy-discord.js/issues"
   },
-  "homepage": "https://github.com/PY44N/easy-discord.js#readme"
+  "keywords": [
+    "easy",
+    "discord",
+    "discord.js",
+    "bot",
+    "robot",
+    "simple",
+    "js",
+    "javascript"
+  ],
+  "homepage": "https://github.com/PY44N/easy-discord.js#readme",
+  "dependencies": {
+    "discord.js": "^12.4.1"
+  }
 }
