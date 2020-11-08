@@ -31,7 +31,7 @@ class BotClass {
                             HelpEmbed.addField("`help`", 'Shows You All The Commmands You Can Use')
                             for (const cmd of this.cmds) {
                                 HelpEmbed.addField('`' + cmd + '`', cmd.desc)
-                        }
+                            }
 
                         msg.channel.send(HelpEmbed)
                     }
@@ -47,6 +47,10 @@ class BotClass {
         this.cmds[command] = []
         this.cmds[command].desc = desc
         this.cmds[command].cmd = cmd
+    }
+
+    findUserByID(id) {
+        return client.users.cache.get(id)
     }
 }
 
